@@ -43,7 +43,7 @@ end
 function wrightomega(z::Complex{T}) where {T <: Real}
     x = real(z)
     y = imag(z)
-    Tπ = T(π)
+    Tπ = float(T)(π)
     if x == -1 && abs(y) == Tπ
         return zero(Complex{T})
     end
